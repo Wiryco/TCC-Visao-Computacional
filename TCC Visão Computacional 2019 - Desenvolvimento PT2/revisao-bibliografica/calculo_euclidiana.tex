@@ -1,0 +1,23 @@
+\begin{flalign*}
+   d = \sqrt{\sum_{k=1}^{n} (X_{ik} - X_{jk})^2} \\
+\end{flalign*}
+
+onde:
+
+\begin{math} X_{ik} \end{math} e \begin{math} X_{jk} \end{math} para k = 1, e \textbf{n} as quantidades de atributos presentes nas instâncias \begin{math} X_{ik} \end{math}, \begin{math} X_{jk} \end{math}. \newline
+
+Segundo \citeonline{MAIA2013}, a distância euclidiana necessita que quatro condições, nos vetores a, b e c, sejam validas para atuar como medida:
+
+%\begin{enumerate}
+%    \item d(a, b) \begin{math} \ge \end{math} 0;
+%    \item d(a, a) = 0;
+%    \item d(a, b) = d(b, a);
+%    \item d(a, c) \begin{math} \le \end{math} d(a, b) + d(b, c).
+%\end{enumerate}
+
+\begin{enumerate}
+    \item A distância do vetorA até o vetorB tem que ser maior ou igual a 0;
+    \item A distância do vetorA até o vetorA tem que ser igual a 0, ou seja, os vetores tem que ser iguais;
+    \item A distância do vetorA até o vetorB tem que ser igual a distância do vetorB até o vetorA;
+    \item A distância do vetorA até o vetorC tem que ser menor ou igual a distância do vetorA até o vetorB mais a distância do vetorB até o vetorC.
+\end{enumerate}

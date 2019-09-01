@@ -1,0 +1,194 @@
+\documentclass[a4paper,12pt,oneside,openany,table,xcdraw]{doctum}
+
+\usepackage[portuguese]{babel}
+%\usepackage{textcomp}
+\usepackage{quoting}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{cite}
+\usepackage{epsf,epsfig,psfig}
+\usepackage{pagina}
+\usepackage{indentfirst}
+\usepackage{theorem}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{boxedminipage}
+\usepackage{float}
+\usepackage{makeidx}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{todonotes}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage[style=index]{glossaries}
+
+% \usepackage{verbatim} - Habilita a função de comentários de múltiplas linhas
+\usepackage{verbatim}
+
+%Tabela de cronograma
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}
+
+% Orientação paisagem
+\usepackage{lscape}
+
+%Coloca o titulo Figura em negrito
+\captionsetup[figure]{labelfont={small,bf},labelformat={default},labelsep=colon,name={Figura}}
+
+\captionsetup[table]{labelfont={small,bf},labelformat={default},labelsep=colon,name={Tabela}}
+
+%abnt-etal-cite=3 (Coloca o et. al.)/abnt-etal-list=3
+\usepackage[alf,abnt-etal-cite=3,abnt-etal-list=3,abnt-url-package=url,abnt-emphasize=bf]{abntex2cite}
+
+%
+\makeindex
+
+
+\newtheorem{deff}{Definição}[section]
+\numberwithin{equation}{chapter}
+
+\theoremstyle{plain}
+
+\bibliographystyle{abnt-num}
+
+\newcommand*{\captionsource}[3]{%
+    \caption{\label{#1}#2.}
+    \vspace{-0.3cm}
+    \caption*{Fonte: #3.}
+}
+
+
+\begin{document}
+\renewcommand{\bibname}{Referencias}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    linktoc=all
+}
+% Infos do projeto
+%
+
+\newcommand{\thecenter}{FACULDADE DOCTUM DE IPATINGA}
+%\newcommand{\thedepartment}{Departamento de Sistemas de Informação}
+\newcommand{\thecourse}{Curso de Sistemas de Informação}
+\newcommand{\thetitle}{VISÃO COMPUTACIONAL APLICADA NO RECONHECIMENTO DE JOGADORES DE FUTEBOL AMERICANO}
+\newcommand{\thetype}{Trabalho de Conclusão de Curso de Graduação}
+\newcommand{\theproftitle}{Bacharel em Sistemas de Informação}
+\newcommand{\thestudent}{Thayrone Marques Silva e Vinicius Andrade Lopes}
+\newcommand{\theadvisor}{Esp.  Tales Wallace Souza}
+\newcommand{\thecity}{Ipatinga}
+
+% \thispagestyle{empty}\listoftodos\pagebreak
+\thispagestyle{empty}\input{./Primeira_Parte/Capa}
+\pagebreak\thispagestyle{empty}\input{./Primeira_Parte/FolhaDeRosto}
+
+\pagebreak\thispagestyle{empty}\input{Primeira_Parte/FolhaDeAprovacao.tex}
+% Inserir Dedicatória
+\pagebreak\thispagestyle{empty}\input{Primeira_Parte/Dedicatoria.tex}
+
+% Inserir Agradecimentos
+\pagebreak\thispagestyle{empty}\input{./Primeira_Parte/Agradecimento}
+
+% Inserir Epígrafe
+\pagebreak\thispagestyle{empty}\input{./Primeira_Parte/Epigrafe}
+
+% Inserir Resumo
+\pagebreak\thispagestyle{empty}\input{./Primeira_Parte/Resumo}
+
+% Inserir Abstract
+\pagebreak\thispagestyle{empty}\input{./Primeira_Parte/Abstract}
+
+\fancypagestyle{plain}{
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+\pagestyle{plain}
+
+\pagebreak
+
+\def\listfigurename{LISTA DE FIGURAS}
+\listoffigures
+\def\listtablename{LISTA DE TABELAS}
+\listoftables
+\input{./Primeira_Parte/ListaDeSiglas.tex}    % não coloquei LISTA DE SIGLAS no meu trabalho, mas fica aqui a chamada comentada.
+\def\contentsname{SUMÁRIO}\tableofcontents
+
+\fancypagestyle{plain}{
+\fancyhf{} % clear all header and footer fields
+\fancyhead[R]{\thepage}
+\setlength{\voffset}{-1cm}
+\setlength{\headsep}{1cm}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+% Espaçamento entre parágrafos
+\setlength{\parskip}{1em}
+
+\pagestyle{plain}
+
+\pagebreak
+\input{./Segunda_Parte/introducao/introducao.tex}
+
+%\input{Segunda_Parte/desenvolvimento/problemas.tex}
+
+%\input{./Segunda_Parte/desenvolvimento/hipoteses.tex}
+
+%\input{./Segunda_Parte/desenvolvimento/objetivos.tex}
+
+
+% inserir demais capítulos aqui
+% -----------------------------
+% -----------------------------
+% -----------------------------
+% -----------------------------
+
+
+
+
+
+\pagebreak
+%\input{./Segunda_Parte/desenvolvimento/justificativa.tex}
+
+\pagebreak
+
+\pagebreak
+%\input{./Segunda_Parte/desenvolvimento/metodologia.tex}
+
+\pagebreak
+
+\pagebreak
+\input{./revisao-bibliografica/revisaoBibliografica.tex}
+
+\pagebreak
+\input{./Segunda_Parte/desenvolvimento/metodologia.tex}
+%\input{./cronograma.tex}
+
+\pagebreak
+\input{Desenvolvimento-Projeto/desenvolvimento.tex}
+
+\pagebreak
+\input{Consideracoes_Finais/consideracoesFinais.tex}
+
+\pagebreak
+%\def\bibname{REFERÊNCIAS}
+\settocbibname{REFERÊNCIAS}
+\bibliography{refbib}
+
+\pagebreak
+\input{glossario.tex}
+% A função \addcontentsline coloca um capítulo sem indice no sumário
+\addcontentsline{toc}{chapter}{GLOSSÁRIO}
+
+\input{anexo.tex}
+\addcontentsline{toc}{chapter}{ANEXO}
+
+
+\end{document}

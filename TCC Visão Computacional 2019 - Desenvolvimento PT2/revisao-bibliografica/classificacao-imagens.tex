@@ -1,0 +1,16 @@
+\subsubsection{{Classificação de imagens}}
+% \textbf coloca o subsection em negrito
+
+Dentro do tema proposto, como já mencionado, a classificação de imagem é a ultima etapa do processamento de imagem. Em síntese, esta etapa é responsável por realizar a classificação das imagens levando em consideração as suas características.
+
+Entretanto, segundo \citeonline{LIBERMAN97}, nessa etapa do processamento, o grau de abstração de cada característica da imagem podem ser classificados em três níveis distintos: baixo, médio e alto.
+
+No processo de baixo nível são utilizados os \textit{pixels} originais da imagem como parâmetros de comparação, para que no final do processo seja gerado propriedades da imagem, em forma de valores numéricos, associados a cada \textit{pixel} que foi analisado. Sequencialmente, o nível médio coleta essas propriedades numéricas geradas pelo processo de baixo nível e produz uma lista de características da imagem. Por fim, o processo de alto nível reúne estas características ocasionadas pelo processo anterior buscando interpretá-las, formando assim o conteúdo da imagem.
+
+Segundo \citeonline{LIBERMAN97}, o processo de classificação ou interpretação de uma imagem é a parte mais inteligente da visão computacional. O autor do artigo cita que essa é uma das etapas de maior alto nível, no qual permite-se obter a “compreensão e a descrição final do fenômeno inicial”.
+
+Para complementar, \citeonline{LIBERMAN97} explica que o processo de classificação de imagem possui duas técnicas para realizar suas tarefas, sendo divididas em supervisionada ou não-supervisionada. A classificação não-supervisionada consiste em um agrupamento automático de sequências similares de uma imagem analisada. Conforme já prescrito neste trabalho no contexto de segmentação interativa e agora completado por \citeonline{LIBERMAN97}, nessa etapa a imagem será segmentada em um número indeterminado de classes, no qual o usuário também será responsável por gerenciar essas classes a fim de alcançar seus objetivos.
+
+De acordo com \citeonline{MAXIMO2005}, no processo de classificação supervisionada, o analista ou usuário filtra as classes de informações seguindo os seus padrões de interesse e separa, na imagem, as regiões que satisfazem essas classes. Após a delimitação das classes, a técnica analisará as mesmas com o objetivo de delimitar \textit{pixels} que serão utilizados como parâmetros para a busca de demais \textit{pixels}.
+
+Simplificadamente, a técnica de classificação supervisionada utiliza amostras de características coletadas durante o processo para identificar cada \textit{pixel} definido como \textit{pixel} desconhecido, ou seja, tons de \textit{pixels} que não fazem parte das características já coletadas anteriormente seguindo os filtros definidos pelo usuário.
