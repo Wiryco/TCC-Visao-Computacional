@@ -26,12 +26,55 @@
 \usepackage[nottoc, notlof, notlot]{tocbibind}
 \usepackage[style=index]{glossaries}
 
+%Configuração para usar titulos quinários
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+%subsubsubsection - usar para titulos quinários
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%Configuração dos outros titulos para usar titulo quinárioa - OBS: tem que usar essa configuração, pois ao utilizar titulos quinários, os titulos quaternários perde a configuração
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@chapter{\@dottedtocline{4}{0}{5em}}
+\def\l@section{\@dottedtocline{4}{0}{5em}}
+\def\l@subsection{\@dottedtocline{4}{0}{5em}}
+\def\l@subsubsection{\@dottedtocline{4}{0}{5em}}
+\def\l@subsubsubsection{\@dottedtocline{4}{0}{5em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{5em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%Fim da configuração de titulos quinários
+
 % \usepackage{verbatim} - Habilita a função de comentários de múltiplas linhas
 \usepackage{verbatim}
 
 %Tabela de cronograma
 \usepackage{multirow}
-\usepackage[dvipsnames]{xcolor}
+%\usepackage[dvipsnames]{xcolor}
 
 % Orientação paisagem
 \usepackage{lscape}

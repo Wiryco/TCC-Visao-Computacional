@@ -1,1 +1,6 @@
-\subsection{\textbf{\textit{Haar Cascade}}}
+%\subsection{\textbf{\textit{Haar Cascade}}}
+\subsubsubsection{\textit{Haar Cascade}}
+
+Para complementar o assunto citado acima, a técnica de \textit{Haar Cascade} utiliza a classificação de imagens para obter um padrão de características que foram extraídas da imagem. Essa classificação é utilizada para montar uma cascata de características, ou seja, um conjunto de imagens. A principal base para a detecção de objetos do classificador \textit{Haar} são os recursos extraídos da imagem, ou seja, ao invés de usar os valores de intensidade de um \textit{pixel}, usa-se as alterações nos valores de contraste entre os grupos retangulares dos \textit{pixels}. Basicamente, \textit{Haar Cascade} é baseada em \textit{Haar Wavelets}, que utiliza uma sequência de funções redimensionadas em quadrantes que juntas formam uma base de \textit{wavelets} \cite{WILSON2006}.
+
+A detecção de objetos e faces utilizando técnicas de classificadores em cascata baseados em recursos \textit{Haar} é um método eficaz proposto por \citeonline{VIOLA2001} em seu artigo. Á abordagem é baseada em \textit{machine learning} (aprendizado de máquina) no qual a função cascata é treinada a partir de enumeras imagens positivas e negativas. Através desse recurso, pode-se obter a eficiência em detecção de objetos em outras imagens \cite{OpenCV}. Este trabalho não descreve os detalhes do funcionamento do detector de Viola-Jones. O leitor interessado pode encontrá-lo em \cite{VIOLA2001}.
